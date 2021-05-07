@@ -8,7 +8,7 @@ class Umbrella {
         this.radius = 50;
         World.add(world, this.umbrella)
         //load Image for BestMan
-        this.image = loadImage("Walking Frame/batman.png")
+        this.batmanImg = loadImage("Walking Frame/batman.png")
         
     }
 
@@ -17,7 +17,10 @@ class Umbrella {
         imageMode(CENTER);
         //display the image for BestMan if the frameCount is over 200, otherwise display the boy with umbrella image
         if(frameCount>=200){
-            image(this.image,pos.x,pos.y+70,300,300);
+            image(this.batmanImg,pos.x,pos.y+70,300,300);
         }    
+        else{
+            image(this.image,pos.x,pos.y+70,300,300);
+        }
     }
 }
